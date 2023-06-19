@@ -1,1 +1,68 @@
-test
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    /* enleve tout le style donné par defaut */ 
+}
+
+body{
+    max-width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+}
+
+.calculatrice{
+    background-color:rgb(152, 134, 156);
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 15px;
+    box-shadow: 0 4px rgb(64, 58, 58);
+}
+.ecran {
+    width: 100%;
+    height: 120px;
+    background-color: rgb(139, 160, 165);
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 1px;
+    font-size: 30px;   
+    margin-bottom: 6px;
+    margin-top: 3px;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgb(64, 58, 58);
+}
+.touches {
+    display:grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(5,10);
+    grid-gap: 0,5px;
+}
+
+.button {
+    padding: 30%;
+    border-radius: 5px;
+    box-shadow: 0 1px #a8a8a8;
+    background-color: #f7f7f7;
+    outline: none;
+}
+
+button:active {
+    box-shadow: 1px #a8a8a8;
+    transform: translateY(2px);
+}
+button[data-key="8"] {
+    background-color: #dd8c29;
+    color: white;
+}
+button[data-key="187"] {
+    grid-column:  2 span;
+    background-color: #15931a ;
+    font-weight: 1 ;
+    color: white ;
+}
